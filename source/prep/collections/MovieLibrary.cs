@@ -58,15 +58,13 @@ namespace prep.collections
 
         public IEnumerable<Movie> all_movies_published_by_pixar()
         {
-            return movies.all_matching((x) => x.production_studio == ProductionStudio.Pixar);
+            return movies.all_matching(x => x.production_studio == ProductionStudio.Pixar);
         }
 
 
         public IEnumerable<Movie> all_movies_published_by_pixar_or_disney()
         {
-            return
-                movies.all_matching(
-                    (x) => x.production_studio == ProductionStudio.Pixar || x.production_studio == ProductionStudio.Disney);
+            return movies.all_matching( x => x.production_studio == ProductionStudio.Pixar || x.production_studio == ProductionStudio.Disney);
         }
 
         public IEnumerable<Movie> sort_all_movies_by_title_ascending()
